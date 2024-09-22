@@ -19,10 +19,12 @@ public class FirstDepthSearchGen
     public FirstDepthSearchGen(MazeCell[,] mazegrid)
     {
         mazeGrid = mazegrid;
-        mazeGrid[currentx, currenty].Visit();
         mazeWidth = mazegrid.GetLength(0);
         mazeDepth = mazegrid.GetLength(1);
         cellCount = mazeDepth * mazeWidth;
+        currentx = mazegrid.GetLength(0) / 2;
+        currenty = mazegrid.GetLength(1) / 2;
+        mazeGrid[currentx, currenty].Visit();
         previousLocations.Add(new Vector2Int(currentx, currenty));
     }
 
