@@ -39,9 +39,16 @@ public class FirstDepthSearchGen
         }
         if (count == 0)
         {
-            previousLocations.RemoveAt(previousLocations.Count - 1);
-            currentx = previousLocations[previousLocations.Count - 1].x;
-            currenty = previousLocations[previousLocations.Count - 1].y;
+            if(Random.Range(1,20) == 1)
+            {
+                removeWall();
+            }
+            else
+            {
+                previousLocations.RemoveAt(previousLocations.Count - 1);
+                currentx = previousLocations[previousLocations.Count - 1].x;
+                currenty = previousLocations[previousLocations.Count - 1].y;
+            }
             GenStep();
         }
         else
@@ -53,7 +60,7 @@ public class FirstDepthSearchGen
                 {
                     if (index == 1)
                     {
-                        nextCellRemoveWalls(currentx, currenty, i);
+                        nextCellRemoveWalls(i);
                         break;
                     }
                     else
@@ -76,7 +83,7 @@ public class FirstDepthSearchGen
         return cells;
     }
 
-    void nextCellRemoveWalls(int x, int y, int direction)
+    void nextCellRemoveWalls(int direction)
     {
         switch (direction)
         {
@@ -106,6 +113,16 @@ public class FirstDepthSearchGen
         previousLocations.Add(new Vector2Int(currentx, currenty));
         mazeGrid[currentx, currenty].Visit();
         checkedCells++;
+    }
+
+    void removeWall()
+    {
+        if (currentx == 0 || currentx >= mazeWidth -1 || currenty == 0 || currenty >= mazeDepth-1) return;
+        int x = currentx - previousLocations[previousLocations.Count - 2].x;
+        int y = currenty - previousLocations[previousLocations.Count - 2].y;
+        int dir = x * x + (x * -1) + (2 * y * y) + (y * -1);
+        checkedCells--;
+        nextCellRemoveWalls(dir);
     }
 }
     
