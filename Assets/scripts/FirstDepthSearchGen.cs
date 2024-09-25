@@ -28,9 +28,9 @@ public class FirstDepthSearchGen
         previousLocations.Add(new Vector2Int(currentx, currenty));
     }
 
-    public void GenStep()
+    public bool GenStep()
     {
-        if (checkedCells >= cellCount) { return; }
+        if (checkedCells >= cellCount) { return true; }
         bool[] unvisitedNeighbours = giveUnvisitedNeighbours(currentx, currenty);
         int count = 0;
         foreach (bool unvisited in unvisitedNeighbours)
@@ -70,6 +70,7 @@ public class FirstDepthSearchGen
                 }
             }
         }
+        return false;
     }
 
     bool[] giveUnvisitedNeighbours(int x, int y)

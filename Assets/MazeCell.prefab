@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6731498630308350367}
   - component: {fileID: 1134356907385778200}
+  - component: {fileID: 1246364637026055517}
   m_Layer: 0
   m_Name: WestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6731498630308350367
 Transform:
@@ -46,6 +47,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &1246364637026055517
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737544295731864102}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.1, y: 0.5, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1564940674277251707
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,12 +73,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6792131779082973984}
   - component: {fileID: 8220823601771065530}
+  - component: {fileID: 123591979664055985}
   m_Layer: 0
   m_Name: SouthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6792131779082973984
 Transform:
@@ -92,6 +110,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &123591979664055985
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564940674277251707}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.1, y: 0.5, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3454932504926347087
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +141,7 @@ GameObject:
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4563624432949478939
@@ -190,7 +224,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &657879637522694056
 Transform:
@@ -231,12 +265,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2879693193405148900}
   - component: {fileID: 4519670107909817753}
+  - component: {fileID: 7065721724899565936}
   m_Layer: 0
   m_Name: NorthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2879693193405148900
 Transform:
@@ -267,6 +302,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &7065721724899565936
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458660625492308280}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.1, y: 0.5, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5946999910196095788
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +416,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6246524690279564383
 Transform:
@@ -419,7 +470,7 @@ GameObject:
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8509863058190292981
@@ -502,7 +553,7 @@ GameObject:
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &3807433999799595791
@@ -580,12 +631,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4257870648400179774}
   - component: {fileID: 6135701633587206083}
+  - component: {fileID: 6502737542118202674}
   m_Layer: 0
   m_Name: EastWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4257870648400179774
 Transform:
@@ -616,6 +668,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &6502737542118202674
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7306240153133004153}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.1, y: 0.5, z: 0.6}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &9215057122760710772
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +699,7 @@ GameObject:
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8915858413937899165

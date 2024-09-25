@@ -22,7 +22,6 @@ public class MazeGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera.main.transform.position = new Vector3(mazeDepth / 2, mazeWidth, mazeWidth / 2);
         mazeGrid = new MazeCell[mazeWidth, mazeDepth];
         for(int i= 0; i< mazeDepth; i++)
         {
@@ -42,9 +41,25 @@ public class MazeGenerator : MonoBehaviour
         {
             Play = !Play;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            for (int i = 0; i < mazeDepth; i++)
+            {
+                for (int j = 0; j < mazeWidth; j++)
+                {
+                    Destroy(mazeGrid[j, i].gameObject);
+                    mazeGrid[j, i] = Instantiate(MazeCellPrefab, new Vector3(i, 0, j), Quaternion.identity);
+                }
+            }
+            generator = new FirstDepthSearchGen(mazeGrid);
+        }
         if (Play)
         {
-            generator.GenStep();
+            while (true)
+            {
+                if (generator.GenStep()) break;
+            }
+            
         }
         
 
