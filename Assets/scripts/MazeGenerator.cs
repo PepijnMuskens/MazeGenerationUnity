@@ -27,7 +27,7 @@ public class MazeGenerator : MonoBehaviour
         {
             for(int j = 0; j < mazeWidth; j++)
             {
-                mazeGrid[j, i] = Instantiate(MazeCellPrefab, new Vector3(i, 0, j), Quaternion.identity);
+                mazeGrid[j, i] = Instantiate(MazeCellPrefab, new Vector3(i*2, 0, j*2), Quaternion.identity);
             }
         }
         generator = new FirstDepthSearchGen(mazeGrid);
@@ -48,7 +48,7 @@ public class MazeGenerator : MonoBehaviour
                 for (int j = 0; j < mazeWidth; j++)
                 {
                     Destroy(mazeGrid[j, i].gameObject);
-                    mazeGrid[j, i] = Instantiate(MazeCellPrefab, new Vector3(i, 0, j), Quaternion.identity);
+                    mazeGrid[j, i] = Instantiate(MazeCellPrefab, new Vector3(i*2, 0, j*2), Quaternion.identity);
                 }
             }
             generator = new FirstDepthSearchGen(mazeGrid);
